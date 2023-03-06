@@ -6,3 +6,19 @@ spring:
     url: jdbc:mysql://localhost:3306/springcloud
     username: root
     password: root
+  # 应用名称
+  application:
+    name: borrowservice
+  cloud:
+    nacos:
+      discovery:
+        #配置nacos注册中心地址
+        server-addr: localhost:8848
+        # 组别
+        group: DEFAULT_GROUP
+        # 临时实例true-临时 false-非临时
+        ephemeral: false
+    loadbalancer:
+      nacos:
+        #开启集群区域优先访问
+        enabled: true
