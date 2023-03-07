@@ -32,3 +32,8 @@ build/
 ### VS Code ###
 .vscode/
 /file/nacos-server-2.0.4
+/file/nacos-server/nacos-server-2.0.4/data
+/file/nacos-server/nacos-server-2.0.4/logs
+/file/nacos-server/nacos-server-2.0.4/bin/logs
+/file/nacos-server/nacos-server-2.0.4/bin/work
+/file/nacos-server/nacos-server-2.0.4/bin/derby.log
