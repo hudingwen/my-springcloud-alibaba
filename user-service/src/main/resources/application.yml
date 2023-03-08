@@ -16,3 +16,7 @@ spring:
         server-addr: localhost:8848
         # 组别
         group: DEFAULT_GROUP
+    sentinel:
+      transport:
+        # 添加监控页面地址即可
+        dashboard: localhost:8858

@@ -22,3 +22,15 @@ spring:
       nacos:
         #开启集群区域优先访问
         enabled: true
+    sentinel:
+      transport:
+        # 添加监控页面地址即可
+        dashboard: localhost:8858
+      # 关闭Context收敛，这样被监控方法可以进行不同链路的单独控制
+      web-context-unify: false
+      # 将刚刚编写的请求映射设定为限流页面
+      block-page: /blocked
+feign:
+  sentinel:
+    # 让feign支持sentinel的熔断降级
+    enabled: true

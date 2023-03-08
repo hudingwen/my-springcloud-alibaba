@@ -19,9 +19,13 @@ spring:
         # 权重大小，越大越优先调用，默认为1
         weight: 0.5
         # 命名空间
-        namespace: dev
+        # namespace: dev
       config:
         # 配置文件后缀名
         file-extension: yml
         # 配置中心服务器地址，也就是Nacos地址
         server-addr: localhost:8848
+    sentinel:
+      transport:
+        # 添加监控页面地址即可
+        dashboard: localhost:8858

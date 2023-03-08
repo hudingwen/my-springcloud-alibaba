@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@FeignClient("userservice")
+@FeignClient(value = "userservice",fallback = UserClientFallback.class)
 public interface UserClient {
 
     @RequestMapping("/user/{uid}")
