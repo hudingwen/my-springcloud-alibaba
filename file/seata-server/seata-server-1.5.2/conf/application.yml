@@ -1,0 +1,68 @@
+server:
+  port: 8869
+
+spring:
+  application:
+    name: seata-server
+
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    path: ${user.home}/logs/seata
+  extend:
+    logstash-appender:
+      destination: 127.0.0.1:4560
+    kafka-appender:
+      bootstrap-servers: 127.0.0.1:9092
+      topic: logback_to_logstash
+
+console:
+  user:
+    username: seata
+    password: seata
+
+seata:
+  server:
+    # 注册到nacos的rpc端口号（netty server port）
+    service-port: 8868 #If not configured, the default is '${server.port} + 1000'
+  config:
+    # support: nacos, consul, apollo, zk, etcd3
+    # type: file
+    type: nacos
+    nacos:
+      # 指定注册到nacos的命名空间ID，按实际情况修改
+      namespace: seata
+      # nacos的ip和端口号，按实际情况修改
+      server-addr: 127.0.0.1:8848
+      # 加载nacos配置文件的默认组名
+      group: DEFAULT_GROUP
+      # 如果nacos登录和密码有变更，按实际环境修改
+      # tc集群名称
+      cluster: default
+      username: nacos
+      password: nacos
+      # 指定seata server和client端从naocs加载的更多配置项，文件名按实际情况修改，这里采用中间件名 + 集群名（区域）
+      data-id: seataServer.properties
+  registry:
+    # support: nacos, eureka, redis, zk, consul, etcd3, sofa
+    # type: file
+    type: nacos
+    nacos:
+      # seata注册到nacos的服务名，可以按实际情况修改
+      application: seata-server
+      # nacos的ip和端口号，按实际情况修改
+      server-addr: 127.0.0.1:8848
+      # seata注册到nacos的分组名称
+      group: DEFAULT_GROUP
+      # seata注册到nacos的命名空间ID
+      namespace: seata
+      # seata-server的集群名称，这里使用了区域名，按实际情况修改
+      # tc集群名称
+      cluster: default
+      username: nacos
+      password: nacos
+  security:
+    secretKey: kKQF7I4L+Tg6hFY9ZgZWu9g1MuQoiO0cE21NesiJ14U=
+    tokenValidityInMilliseconds: 1800000
+    ignore:
+      urls: /,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/api/v1/auth/login

@@ -1,0 +1,8 @@
+Java HotSpot(TM) 64-Bit Server VM (25.202-b08) for windows-amd64 JRE (1.8.0_202-b08), built on Dec 15 2018 19:54:30 by "java_re" with MS VC++ 10.0 (VS2010)
+Memory: 4k page, physical 16656808k(7040400k free), swap 25045416k(11739812k free)
+CommandLine flags: -XX:CMSInitiatingOccupancyFraction=75 -XX:+CMSParallelRemarkEnabled -XX:CompressedClassSpaceSize=260046848 -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=D:\360Downloads\desktop\java\my-springcloud-alibaba\file\seata-server\seata-server-1.5.2/logs/java_heapdump.hprof -XX:InitialHeapSize=1073741824 -XX:MaxDirectMemorySize=536870912 -XX:MaxHeapSize=1073741824 -XX:MaxMetaspaceSize=268435456 -XX:MaxNewSize=536870912 -XX:MetaspaceSize=134217728 -XX:NewSize=536870912 -XX:-OmitStackTraceInFastThrow -XX:+PrintGC -XX:+PrintGCTimeStamps -XX:SurvivorRatio=10 -XX:ThreadStackSize=512 -XX:-UseAdaptiveSizePolicy -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:-UseLargePagesIndividualAllocation -XX:+UseParallelGC 
+4.369: [GC (Allocation Failure)  437248K->22029K(1005056K), 0.0187227 secs]
+6.588: [GC (Allocation Failure)  459277K->18316K(1005056K), 0.0150797 secs]
+11.014: [GC (Allocation Failure)  455564K->29082K(1005056K), 0.0201713 secs]
+788.994: [GC (Allocation Failure)  466330K->30050K(1005056K), 0.0315293 secs]
+2235.136: [GC (Allocation Failure)  467298K->26694K(1005056K), 0.0314749 secs]

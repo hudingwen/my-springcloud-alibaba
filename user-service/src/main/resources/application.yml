@@ -20,3 +20,24 @@ spring:
       transport:
         # 添加监控页面地址即可
         dashboard: localhost:8858
+seata:
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      group: DEFAULT_GROUP
+      server-addr: localhost:8848
+      namespace: seata
+  service:
+    vgroup-mapping:
+      default_tx_group: default
+  #      bookservice_tx_group: default
+  #  tx-service-group: 'bookservice_tx_group'
+  config:
+    type: nacos
+    nacos:
+      application: seata-server
+      group: DEFAULT_GROUP
+      server-addr: localhost:8848
+      namespace: seata
+      data-id: seataServer.properties

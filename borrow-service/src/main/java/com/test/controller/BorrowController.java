@@ -19,17 +19,20 @@ public class BorrowController {
 
     @Resource
     BorrowService service;
-    @SentinelResource("getBorrow")   //监控此方法，无论被谁执行都在监控范围内，这里给的value是自定义名称，这个注解可以加在任何方法上
     @RequestMapping("/borrow/{uid}")
     UserBorrowDetail findUserBorrows(@PathVariable("uid") int uid){
         return service.getUserBorrowDetailByUid(uid);
     }
-    @RequestMapping("/blocked")
-    JSONObject blocked(){
+
+    @RequestMapping("/borrow/take/{uid}/{bid}")
+    JSONObject borrow(@PathVariable("uid") int uid,
+                      @PathVariable("bid") int bid){
+        service.doBorrow(uid, bid);
+
         JSONObject object = new JSONObject();
-        object.put("code", 403);
+        object.put("code", "200");
         object.put("success", false);
-        object.put("massage", "您的请求频率过快，请稍后再试！");
+        object.put("message", "借阅成功！");
         return object;
     }
 

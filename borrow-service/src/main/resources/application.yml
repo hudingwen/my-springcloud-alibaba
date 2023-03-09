@@ -17,7 +17,7 @@ spring:
         # 组别
         group: DEFAULT_GROUP
         # 临时实例true-临时 false-非临时
-        ephemeral: false
+        #ephemeral: false
     loadbalancer:
       nacos:
         #开启集群区域优先访问
@@ -34,3 +34,24 @@ feign:
   sentinel:
     # 让feign支持sentinel的熔断降级
     enabled: true
+seata:
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      group: DEFAULT_GROUP
+      server-addr: localhost:8848
+      namespace: seata
+  service:
+    vgroup-mapping:
+      default_tx_group: default
+  #      bookservice_tx_group: default
+  #  tx-service-group: 'bookservice_tx_group'
+  config:
+    type: nacos
+    nacos:
+      application: seata-server
+      group: DEFAULT_GROUP
+      server-addr: localhost:8848
+      namespace: seata
+      data-id: seataServer.properties
