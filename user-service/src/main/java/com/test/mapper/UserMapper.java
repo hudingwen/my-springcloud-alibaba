@@ -1,7 +1,7 @@
 package com.test.mapper;
 
 
-import com.hudingwen.entity.User;
+import com.test.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;

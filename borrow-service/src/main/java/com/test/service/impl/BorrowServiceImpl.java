@@ -1,9 +1,9 @@
 package com.test.service.impl;
 
-import com.hudingwen.entity.Book;
-import com.hudingwen.entity.Borrow;
+import com.test.entity.Book;
+import com.test.entity.Borrow;
 
-import com.hudingwen.entity.User;
+import com.test.entity.User;
 import com.test.entity.UserBorrowDetail;
 import com.test.mapper.BorrowMapper;
 import com.test.service.BorrowService;

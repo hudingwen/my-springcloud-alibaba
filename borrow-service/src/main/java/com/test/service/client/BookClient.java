@@ -1,6 +1,6 @@
 package com.test.service.client;
 
-import com.hudingwen.entity.Book;
+import com.test.entity.Book;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

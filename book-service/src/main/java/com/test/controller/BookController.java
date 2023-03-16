@@ -1,7 +1,7 @@
 package com.test.controller;
 
 
-import com.hudingwen.entity.Book;
+import com.test.entity.Book;
 import com.test.service.BookService;
 import io.seata.core.context.RootContext;
 import org.springframework.beans.factory.annotation.Value;

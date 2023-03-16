@@ -21,7 +21,7 @@
         </dependency>
         <dependency>
             <groupId>com.hudingwen</groupId>
-            <artifactId>commons</artifactId>
+            <artifactId>common-entity</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!--nacos发现服务-->

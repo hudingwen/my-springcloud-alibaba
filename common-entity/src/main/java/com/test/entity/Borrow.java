@@ -1,4 +1,4 @@
-package com.hudingwen.entity;
+package com.test.entity;
 
 import lombok.Data;
 

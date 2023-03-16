@@ -1,7 +1,7 @@
 package com.test.controller;
 
 
-import com.hudingwen.entity.User;
+import com.test.entity.User;
 import com.test.service.UserService;
 import io.seata.core.context.RootContext;
 import org.springframework.web.bind.annotation.PathVariable;

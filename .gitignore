@@ -37,3 +37,4 @@ build/
 /file/nacos-server/nacos-server-2.0.4/bin/logs
 /file/nacos-server/nacos-server-2.0.4/bin/work
 /file/nacos-server/nacos-server-2.0.4/bin/derby.log
+/file/seata-server/seata-server-1.5.2/logs

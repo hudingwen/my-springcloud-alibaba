@@ -1,7 +1,7 @@
 package com.test.mapper;
 
 
-import com.hudingwen.entity.Book;
+import com.test.entity.Book;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;

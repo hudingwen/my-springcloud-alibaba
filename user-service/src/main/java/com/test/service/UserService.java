@@ -1,7 +1,7 @@
 package com.test.service;
 
 
-import com.hudingwen.entity.User;
+import com.test.entity.User;
 
 public interface UserService {
     User getUserById(int uid);

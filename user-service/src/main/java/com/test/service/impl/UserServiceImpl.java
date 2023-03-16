@@ -1,7 +1,7 @@
 package com.test.service.impl;
 
 
-import com.hudingwen.entity.User;
+import com.test.entity.User;
 import com.test.mapper.UserMapper;
 import com.test.service.UserService;
 import org.springframework.stereotype.Service;

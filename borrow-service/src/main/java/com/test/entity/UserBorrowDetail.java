@@ -1,7 +1,7 @@
 package com.test.entity;
 
-import com.hudingwen.entity.Book;
-import com.hudingwen.entity.User;
+import com.test.entity.Book;
+import com.test.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
