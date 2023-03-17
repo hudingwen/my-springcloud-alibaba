@@ -7,6 +7,12 @@ spring:
   profiles:
     # 环境也是和配置文件保持一致
     active: dev
+#  session:
+#    # 存储类型修改为redis
+#    store-type: redis
+#  redis:
+#    # Redis服务器的信息
+#    host: localhost
   cloud:
     nacos:
       discovery:
@@ -50,3 +56,16 @@ seata:
       server-addr: localhost:8848
       namespace: seata
       data-id: seataServer.properties
+security:
+  oauth2:
+    client:
+      #不多说了
+      client-id: web
+      client-secret: 654321
+      #Token获取地址
+      access-token-uri: http://localhost:8501/sso/oauth/token
+      #验证页面地址
+      user-authorization-uri: http://localhost:8501/sso/oauth/authorize
+    resource:
+      #Token信息获取和校验地址
+      token-info-uri: http://localhost:8501/sso/oauth/check_token

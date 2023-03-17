@@ -19,6 +19,7 @@
         <module>book-service</module>
         <module>borrow-service</module>
         <module>common-entity</module>
+        <module>auth-service</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

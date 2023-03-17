@@ -4,6 +4,8 @@ package com.test.controller;
 import com.test.entity.User;
 import com.test.service.UserService;
 import io.seata.core.context.RootContext;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +20,9 @@ public class UserController {
     //这里以RESTFul风格为例
     @RequestMapping("/user/{uid}")
     public User findUserById(@PathVariable("uid") int uid){
+        //通过SecurityContextHolder将用户信息取出
+        SecurityContext context = SecurityContextHolder.getContext();
+        System.out.println(context.getAuthentication());
         return service.getUserById(uid);
     }
 
