@@ -64,13 +64,9 @@ seata:
 security:
   oauth2:
     client:
-      #不多说了
+      #基操
       client-id: web
       client-secret: 654321
-      #Token获取地址
-      access-token-uri: http://localhost:8501/sso/oauth/token
-      #验证页面地址
-      user-authorization-uri: http://localhost:8501/sso/oauth/authorize
     resource:
-      #Token信息获取和校验地址
+      #因为资源服务器得验证你的Token是否有访问此资源的权限以及用户信息，所以只需要一个验证地址
       token-info-uri: http://localhost:8501/sso/oauth/check_token
