@@ -40,6 +40,11 @@ feign:
   sentinel:
     # 让feign支持sentinel的熔断降级
     enabled: true
+  oauth2:
+    #开启Oauth支持，这样就会在请求头中携带Token了
+    enabled: true
+    #同时开启负载均衡支持
+    load-balanced: true
 seata:
   registry:
     type: nacos
